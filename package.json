@@ -4,21 +4,48 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "set DEBUG=vite:deps && vite --config ./config/vite.config.dev.js --mode development",
+    "build": "vite build --config ./config/vite.config.prod.js --mode production",
+    "report": "cross-env REPORT=true npm run build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .vue,.js ./",
+    "lint:fix": "eslint --fix --ext .vue,.js ./"
   },
   "dependencies": {
-    "vue": "^3.2.45"
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "nprogress": "^0.2.0",
+    "store": "^2.0.12",
+    "vant": "^4.0.11",
+    "vconsole": "^3.15.0",
+    "vue": "^3.2.45",
+    "vue-router": "4"
   },
   "devDependencies": {
+    "@types/node": "^18.14.2",
     "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "cross-env": "^7.0.3",
     "eslint": "8.2.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-vue": "9.3.0",
-    "vite": "^4.1.0"
+    "less": "^4.1.3",
+    "prettier": "2.8.3",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "unplugin-vue-components": "^0.24.0",
+    "unplugin-vue-define-options": "^1.2.3",
+    "vite": "^4.1.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-imagemin": "^0.6.1",
+    "vite-plugin-vconsole": "^1.3.1",
+    "vite-svg-loader": "^4.0.0"
+  },
+  "resolutions": {
+    "bin-wrapper": "npm:bin-wrapper-china"
   }
 }
