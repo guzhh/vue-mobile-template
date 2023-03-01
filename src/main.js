@@ -3,9 +3,12 @@ import "@/assets/style/global.less";
 import App from "./App.vue";
 import "@/plugins/vant";
 import router, { setupRouter } from "@/router";
+import { setupStore } from "@/store/index";
 
 async function bootstrap() {
 	const app = createApp(App);
+	// 挂载 pinia
+	setupStore(app);
 	// 挂载路由
 	await setupRouter(app);
 	// 监听路由准备就绪后挂载APP实例
