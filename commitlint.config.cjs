@@ -61,57 +61,57 @@ module.exports = {
     types: [
       {
         value: "feat",
-        name: "feat:     🚀  A new feature",
+        name: "feat:     🚀  新增功能",
         emoji: "🚀"
       },
       {
         value: "fix",
-        name: "fix:      🧩  A bug fix",
+        name: "fix:      🧩  修复缺陷",
         emoji: "🧩"
       },
       {
         value: "docs",
-        name: "docs:     📚  Documentation only changes",
+        name: "docs:     📚  文档变更",
         emoji: "📚"
       },
       {
         value: "style",
-        name: "style:    🎨  Changes that do not affect the meaning of the code",
+        name: "style:    🎨  代码格式（不影响功能，例如空格、分号等格式修正）",
         emoji: "🎨"
       },
       {
         value: "refactor",
-        name: "refactor: ♻️   A code change that neither fixes a bug nor adds a feature",
+        name: "refactor: ♻️   代码重构（不包括 bug 修复、功能新增）",
         emoji: "♻️"
       },
       {
         value: "perf",
-        name: "perf:     ⚡️  A code change that improves performance",
+        name: "perf:     ⚡️  性能优化",
         emoji: "⚡️"
       },
       {
         value: "test",
-        name: "test:     ✅  Adding missing tests or correcting existing tests",
+        name: "test:     ✅  添加疏漏测试或已有测试改动",
         emoji: "✅"
       },
       {
         value: "build",
-        name: "build:    📦️   Changes that affect the build system or external dependencies",
+        name: "build:    📦️   构建流程、外部依赖变更（如升级 npm 包、修改 webpack 配置等）",
         emoji: "📦️"
       },
       {
         value: "ci",
-        name: "ci:       🎡  Changes to our CI configuration files and scripts",
+        name: "ci:       🎡  修改 CI 配置、脚本",
         emoji: "🎡"
       },
       {
         value: "chore",
-        name: "chore:    🔨  Other changes that don't modify src or test files",
+        name: "chore:    🔨  回滚 commit",
         emoji: "🔨"
       },
       {
         value: "revert",
-        name: "revert:   ⏪️  Reverts a previous commit",
+        name: "revert:   ⏪️  对构建过程或辅助工具和库的更改（不影响源文件、测试用例）",
         emoji: "⏪️"
       }
       // 中文版
