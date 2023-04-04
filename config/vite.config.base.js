@@ -5,11 +5,10 @@ import svgLoader from "vite-svg-loader";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import DefineOptions from "unplugin-vue-define-options/vite";
 import { createHtmlPlugin } from "vite-plugin-html";
-import Components from "unplugin-vue-components/vite";
-import { VantResolver } from "unplugin-vue-components/resolvers";
 import { getEnv } from "./utils/index.js";
 import packageJson from "../package.json";
 import vConsole from "./plugin/vConsole.js";
+import configVantResolverPlugin from "./plugin/vantResolver.js";
 
 export default defineConfig({
 	plugins: [
@@ -17,8 +16,8 @@ export default defineConfig({
 		vueJsx(),
 		vConsole(),
 		DefineOptions(),
-		Components({ resolvers: [VantResolver()] }), // 按需引入vite
 		svgLoader({ svgoConfig: {} }), // 将svg当做组件使用
+		configVantResolverPlugin(), // vant自动导入
 		createHtmlPlugin({
 			// 为index插入
 			inject: {

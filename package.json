@@ -54,6 +54,7 @@
 		"postcss-px-to-viewport-8-plugin": "^1.2.0",
 		"prettier": "2.8.3",
 		"rollup-plugin-visualizer": "^5.9.0",
+		"unplugin-auto-import": "^0.15.2",
 		"unplugin-vue-components": "^0.24.0",
 		"unplugin-vue-define-options": "^1.2.3",
 		"vite": "^4.1.0",
